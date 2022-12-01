@@ -1,0 +1,5 @@
+# Debian packaging section
+set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
+set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS YES)
+include(CPack)
+
