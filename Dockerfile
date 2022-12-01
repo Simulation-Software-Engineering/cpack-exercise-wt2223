@@ -16,12 +16,9 @@ RUN apt-get -qq update && \
         vim \
         tree \
         lintian
-        
-# Get, unpack, build, and install yaml-cpp        
-RUN mkdir software && cd software && \
-    git clone https://github.com/jbeder/yaml-cpp.git && \
-    cd yaml-cpp && mkdir build && cd build && \
-    cmake -DYAML_BUILD_SHARED_LIBS=ON .. && make -j4 && make install
+
+# Install yaml-cpp        
+RUN apt-get -qq -y install libyaml-cpp-dev
     
 # This is some strange Docker problem. Normally, you don't need to add /usr/local to these
 ENV LIBRARY_PATH $LIBRARY_PATH:/usr/local/lib/
