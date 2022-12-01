@@ -44,3 +44,4 @@ install(TARGETS cpackexample cpackexamplelib
   PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/includedir
   INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/
   )
+include(cmake/CPackConfig.cmake)
