@@ -1,0 +1,17 @@
+set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
+
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "CPack Exercise hofmanjn"
+  CACHE STRING "Extended summary...")
+
+set(CPACK_EXTENDED_DESCRIPTION "This is an exercise Package")
+set(CPACK_PACKAGE_VENDOR "SSE Course")
+set(CPACK_PACKAGE_CONTACT "email@email.com")
+set(CPACK_PACKAGE_MAINTAINERS "Jan Hofmann - ${CPACK_PACKAGE_CONTACT}")
+set(CPACK_PACKAGE_HOMEPAGE_URL "https://simulation-software-engineering.github.io")
+
+SET(CPACK_SET_DESTDIR "on")
+set(CPACK_GENERATOR "DEB")
+set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
+set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS YES)
+set(CPACK_STRIP_FILES TRUE)
+include(CPack)
