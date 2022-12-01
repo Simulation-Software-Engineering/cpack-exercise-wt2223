@@ -19,8 +19,6 @@ find_package(yaml-cpp
   )
 
 
-
-
 file(GLOB SOURCES  "**/*.cpp")
 add_library(cpackexamplelib ${SOURCES})
 
@@ -53,3 +51,6 @@ install(TARGETS "${PROJECT_NAME}" cpackexamplelib
   ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/
   PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_PREFIX}/include/cpackexamplelib/
   )
+
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+include(CPackConfig)
