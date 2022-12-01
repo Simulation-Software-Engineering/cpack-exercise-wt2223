@@ -1,0 +1,20 @@
+set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
+
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "SSE cpack exercise demo project"
+  CACHE STRING "Extended summary.")
+
+set(CPACK_PACKAGE_VENDOR "Tim Neumann")
+set(CPACK_PACKAGE_CONTACT "tim.neumann@stuvus.de")
+set(CPACK_PACKAGE_MAINTAINERS "Tim Neumann ${CPACK_PACKAGE_CONTACT}")
+set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/neumantm/cpack-exercise-wt2223")
+
+set(CPACK_STRIP_FILES TRUE)
+
+set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
+set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS YES)
+
+
+set(CPACK_GENERATOR "TGZ;DEB")
+
+
+include(CPack)
