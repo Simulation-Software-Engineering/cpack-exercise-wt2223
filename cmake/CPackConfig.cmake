@@ -1,0 +1,9 @@
+set(CPACK_PACKAGE_NAME "${PROJECT_NAME}")
+set(CPACK_PACKAGE_VENDOR "Felix Neubauer")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "SSE CPack example"
+CACHE STRING "Extended summary.")
+set(CPACK_PACKAGE_HOMEPAGE_URL "logende.org")
+
+set(CPACK_GENERATOR "TGZ;DEB")
+
+include(CPack)
