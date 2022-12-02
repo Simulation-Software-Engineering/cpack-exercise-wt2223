@@ -28,4 +28,17 @@ ENV LIBRARY_PATH $LIBRARY_PATH:/usr/local/lib/
 ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:/usr/local/lib/
 ENV PATH $PATH:/usr/local/bin/
 
-CMD ["/bin/bash"]
+
+# build and install the cmake exercise
+RUN cd /software && \
+    git clone https://github.com/LitschiW/cpack-exercise-wt2223.git && \
+    cd cpack-exercise-wt2223 && mkdir build && cd build && \
+    cmake .. && make -j4 package
+
+RUN echo "cd /software/cpack-exercise-wt2223/build && ls -lv && cp *.deb *.tar.gz -t /mnt/cpack-exercise/" > /usr/local/bin/copyout && \
+    chmod +x /usr/local/bin/copyout
+
+ENTRYPOINT ["/bin/bash", "/usr/local/bin/copyout"]
+
+
+
