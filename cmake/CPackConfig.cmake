@@ -11,7 +11,7 @@ set(CPACK_EXTENDED_DESCRIPTION "This is an exercise Package")
 set(CPACK_PACKAGE_VENDOR "SSE Course")
 set(CPACK_PACKAGE_CONTACT "jan.hofmann@ims.uni-stuttgart.de")
 set(CPACK_PACKAGE_MAINTAINERS "Jan Hofmann<${CPACK_PACKAGE_CONTACT}>")
-set(CPACK_PACKAGE_HOMEPAGE_URL "https://simulation-software-engineering.github.io")
+set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/bluzukk/cpack-exercise-wt2223")
 
 SET(CPACK_SET_DESTDIR "on")
 set(CPACK_GENERATOR "TGZ;DEB")
