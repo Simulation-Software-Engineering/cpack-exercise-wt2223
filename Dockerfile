@@ -36,9 +36,18 @@ RUN mkdir -p cpackexercise/build
 ADD . ./cpackexercise
 WORKDIR ./cpackexercise/build
 
-RUN echo '#########################\n CMake Go brrr \n#########################'
-RUN cmake -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ..
-RUN make install package
+RUN echo '#########################\n CMake go brrr \n#########################'
+RUN cmake -DBUILD_SHARED_LIBS=ON \
+          -DCMAKE_BUILD_TYPE=Release ..
+RUN make clean && make install && make package
+
+# For testing:
+RUN cpackexample; which cpackexample
+RUN rm /usr/local/bin/cpackexample
+RUN apt install -y ./cpackexample_*.*.*_amd64.deb \
+      && echo "Installation Successful"
+RUN dpkg-deb -f cpackexample_*.*.*_amd64.deb Depends
+RUN cpackexample; which cpackexample
 
 # (Optional) Run lintian
 RUN lintian cpackexample_*
