@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION "3.12")
 
 FIND_PACKAGE(deal.II 9.1.0 REQUIRED
   HINTS ${DEAL_II_DIR} ../ ../../ $ENV{DEAL_II_DIR}
-  )
+)
 DEAL_II_INITIALIZE_CACHED_VARIABLES()
 
 project("cpackexample" VERSION 0.1.0)
