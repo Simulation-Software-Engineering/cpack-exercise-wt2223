@@ -47,8 +47,7 @@ install(TARGETS cpackexample cpackexamplelib
   INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/include/cpackexamplelib
   )
 
-set(CPACK_STRIP_FILES TRUE)
+
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 include(CPackConfig)
-
