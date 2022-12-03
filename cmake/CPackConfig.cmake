@@ -1,0 +1,18 @@
+set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
+
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "CPack Exercise Winter Semester 2022-2023"
+        CACHE STRING "Winter's summary.")
+
+set(CPACK_PACKAGE_VENDOR "Mustafa")
+set(CPACK_PACKAGE_CONTACT "mustafacevik963@gmail.com")
+set(CPACK_PACKAGE_MAINTAINERS "SSE lectured student ${CPACK_PACKAGE_CONTACT}")
+set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/musteng")
+set(CPACK_GENERATOR "TGZ;DEB")
+
+
+# Debian packaging section
+set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
+set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS YES)
+set(CPACK_STRIP_FILES TRUE)
+
+include(CPack)
