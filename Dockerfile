@@ -39,6 +39,3 @@ RUN echo "cd /software/cpack-exercise-wt2223/build && ls -lv && cp *.deb *.tar.g
     chmod +x /usr/local/bin/copyout
 
 ENTRYPOINT ["/bin/bash", "/usr/local/bin/copyout"]
-
-
-
