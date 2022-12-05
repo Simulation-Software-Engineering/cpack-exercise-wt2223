@@ -1,3 +1,4 @@
+# cmake modules
 cmake_minimum_required(VERSION "3.12")
 
 FIND_PACKAGE(deal.II 9.1.0 REQUIRED
@@ -5,7 +6,7 @@ FIND_PACKAGE(deal.II 9.1.0 REQUIRED
   )
 DEAL_II_INITIALIZE_CACHED_VARIABLES()
 
-project("cpackexample" VERSION 0.1.0)
+project("cpackexample" VERSION 0.1.1)
 
 find_package(Boost
   1.65.1
@@ -20,9 +21,30 @@ find_package(yaml-cpp
 
 add_library(cpackexamplelib filesystem/filesystem.cpp fem/fem.cpp flatset/flatset.cpp yamlParser/yamlParser.cpp)
 
+target_include_directories(cpackexamplelib
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}
+    PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/cpackexamplelib>
+)
+
 add_executable("${PROJECT_NAME}" main.cpp)
 target_link_libraries("${PROJECT_NAME}" cpackexamplelib)
 target_link_libraries(cpackexamplelib Boost::filesystem ${YAML_CPP_LIBRARIES})
 
 DEAL_II_SETUP_TARGET("${PROJECT_NAME}")
 DEAL_II_SETUP_TARGET(cpackexamplelib)
+
+include(GNUInstallDirs)
+install(TARGETS cpackexample cpackexamplelib
+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+  PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/cpackexamplelib
+  INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/cpackexamplelib
+  )
+
+# include configuration
+include(cmake/CPackConfig)
+
