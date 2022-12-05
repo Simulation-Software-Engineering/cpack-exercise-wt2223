@@ -1,0 +1,11 @@
+Architecture: amd64
+Depends: libc6 (>= 2.34)
+Description: cpackexample exercise that took hours of my life
+Homepage: https://simulation-software-engineering.github.io
+Maintainer: goncberk@gmail.com
+Package: cpackexample
+Priority: optional
+Section: devel
+Version: 0.1.0
+Installed-Size: 397
+
