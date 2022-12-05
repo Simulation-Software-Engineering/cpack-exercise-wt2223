@@ -27,7 +27,8 @@ RUN mkdir software && cd software && \
 RUN git clone https://github.com/uygarkov/cpack-exercise-wt2223.git && \
 	mkdir -p /mnt/cpack-exercise-wt2223/build/ && \
 	cd /mnt/cpack-exercise-wt2223/build/ && \
-	cmake .. && make package && \
+	cmake -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release .. && \
+	make package && \
 	apt install ./cpackexample_0.1.1_amd64.deb
 
     
