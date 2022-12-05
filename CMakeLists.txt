@@ -46,5 +46,5 @@ install(TARGETS cpackexample cpackexamplelib
   )
 
 # include configuration
-include(cmake/CPackConfig)
+include(cmake/CPackConfig.make)
 
