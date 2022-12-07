@@ -1,0 +1,17 @@
+set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
+
+set(CPACK_PACKAGE_MAINTAINERS "kurtyisn (Sinan Kurtyigit)")
+set(CPACK_PACKAGE_CONTACT "st142476@stud.uni-stuttgart.de")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "SSE cpack example project")
+set(CPACK_PACKAGE_VENDOR "kurtyisn (Sinan Kurtyigit)")
+set(CPACK_PACKAGE_HOMEPAGE "https://github.com/seinan9/cpack-exercise-wt2223")
+
+set(CPACK_GENERATOR "TGZ;DEB")
+set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
+set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS YES)
+set(CPACK_DEBIAN_PACKAGE_NAME cpackexample)
+set(CPACK_DEBIAN_PACKAGE_VERSION 1.0)
+set(CPACK_DEBIAN_PACKAGE_RELEASE 1)
+set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE amd64)
+set(CPACK_STRIP_FILES "/usr/bin/cpackexample")
+include(CPack)
