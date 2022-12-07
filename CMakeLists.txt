@@ -36,16 +36,21 @@ target_include_directories(cpackexamplelib
         ${CMAKE_CURRENT_SOURCE_DIR}/includedir
     PUBLIC
         # where top-level project will look for the library's public headers
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/includedir>
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/>
         # where external projects will look for the library's public headers
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/includedir>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/cpackexample>
 )
 
 include(GNUInstallDirs)
 install(TARGETS "${PROJECT_NAME}" cpackexamplelib
-  LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
-  ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
-  RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin
-  PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_PREFIX}/include/cpackexamplelib
-  # INCLUDES DESTINATION ${DCMAKE_INSTALL_PREFIX}/
+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+  PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/cpackexample
+  INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/
   )
+
+# Adding other cmake modules (standard like this)
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+# Include our packaging module (standard like this)
+include(CPackConfig)
