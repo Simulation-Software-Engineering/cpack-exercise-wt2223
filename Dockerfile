@@ -32,4 +32,4 @@ ENV PATH $PATH:/usr/local/bin/
 # Initial interactive container:
 # CMD ["/bin/bash"]
 # (BONUS) Package creation automatization:
-CMD mkdir build && cd build && cmake -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ../mnt/cpack-exercise && make package && mv -t ../mnt/cpack-exercise cpackexample_0.1.0_amd64.deb cpackexample-0.1.0-Linux.tar.gz
+CMD mkdir build && cd build && cmake -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ../mnt/cpack-exercise && make package && mv -t ../mnt/cpack-exercise cpackexample_0.1.0_amd64.deb cpackexample-0.1.0-Linux.tar.gz && /bin/bash
