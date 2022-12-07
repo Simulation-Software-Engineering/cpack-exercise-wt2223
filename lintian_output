@@ -1,0 +1,5 @@
+E: cpackexample: extended-description-is-empty
+E: cpackexample: no-changelog usr/share/doc/cpackexample/changelog.Debian.gz (non-native package)
+E: cpackexample: no-copyright-file
+E: cpackexample: no-phrase Maintainer st142476@stud.uni-stuttgart.de
+W: cpackexample: no-manual-page usr/bin/cpackexample
