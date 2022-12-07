@@ -31,7 +31,6 @@ DEAL_II_SETUP_TARGET(cpackexamplelib)
 
 target_include_directories(cpackexamplelib
         PRIVATE
-        # where the library itself will look for its internal headers
         ${CMAKE_CURRENT_SOURCE_DIR}/fem
         ${CMAKE_CURRENT_SOURCE_DIR}/filesystem
         ${CMAKE_CURRENT_SOURCE_DIR}/flatset
