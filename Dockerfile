@@ -1,4 +1,4 @@
-From ubuntu:22.04
+FROM ubuntu:22.04
 
 COPY inittimezone /usr/local/bin/inittimezone
 
