@@ -1,0 +1,18 @@
+set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
+
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "SSE cpack exercise")
+set(CPACK_PACKAGE_DESCRIPTON "SSE cpack exercise long description")
+
+set(CPACK_PACKAGE_VENDOR "Moritz Strack")
+set(CPACK_PACKAGE_CONTACT "st166660@stud.uni-stuttgart.de")
+set(CPACK_PACKAGE_MAINTAINERS "SEE lecturers and attendends ${CPACK_PACKAGE_CONTACT}")
+set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/Straggio/cpack-exercise-wt2223")
+
+set(CPACK_STRIP_FILES TRUE)
+
+set(CPACK_GENERATOR "TGZ;DEB")
+
+set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
+set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS YES)
+
+include(CPack)
