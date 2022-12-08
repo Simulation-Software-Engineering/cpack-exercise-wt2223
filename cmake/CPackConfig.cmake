@@ -1,0 +1,18 @@
+set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
+
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "CPack example project"
+  CACHE STRING "Extended summary.")
+
+set(CPACK_PACKAGE_VENDOR "Johannes Erwerle")
+set(CPACK_PACKAGE_CONTACT "johannes.erwerle@example.com")
+set(CPACK_PACKAGE_MAINTAINERS "Johannes Erwerle ${CPACK_PACKAGE_CONTACT}")
+set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/991jo/cpack-exercise-wt2223")
+
+set(CPACK_GENERATOR "TGZ;DEB")
+
+set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
+set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS YES)
+set(CPACK_STRIP_FILES YES)
+
+
+include(CPack)
