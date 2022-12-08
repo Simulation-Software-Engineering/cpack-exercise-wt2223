@@ -1,0 +1,12 @@
+Architecture: amd64
+Depends: libboost-filesystem1.74.0 (>= 1.74.0), libc6 (>= 2.34), libdeal.ii-9.3.2 (>= 9.3.2), libgcc-s1 (>= 3.0), libopenmpi3 (>= 4.1.2), libstdc++6 (>= 11), libtbb2 (>= 2017~U7), libtrilinos-teuchos-13.2 (>= 13.2.0)
+Description: SSE CPack exercise
+ Package with solution for CPack - Simulation Software Engineering.
+Homepage: https://github.com/bishwash369/cpack-exercise-wt2223
+Maintainer: bishwashparajuli10@gmail.com
+Package: cpackexample
+Priority: optional
+Section: devel
+Version: 0.1.0
+Installed-Size: 752
+

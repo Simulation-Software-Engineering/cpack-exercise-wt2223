@@ -1,0 +1,6 @@
+d3a87ebb2cf06583e906339a729d08bf  usr/bin/cpackexample
+2c6b5887c7ff0904a2953cdca2bce2ee  usr/include/cpackexample/fem.hpp
+54426529bc9ec0a50d89b7898187c81e  usr/include/cpackexample/filesystem.hpp
+2b5895824be3cc1ae729e148b7671827  usr/include/cpackexample/flatset.hpp
+c4a87dcaff394da67f96bbc471853513  usr/include/cpackexample/yamlParser.hpp
+49b2d13250aa9894e701babf528ae213  usr/lib/libcpackexamplelib.so
